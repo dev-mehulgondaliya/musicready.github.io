@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- favicon -->
+    <link rel="icon" href="images/logo.png">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <!-- remixicon cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- custom css file -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <!-- navabar section -->
+    <header id="navbar">
+        <ul class="nav d-flex align-items-center">
+            <li class="nav-item">
+                <a class="nav-link d-flex align-items-center gap-2 text-white" href="">
+                    <img src="images/logo.png" class="logo" alt="wavemusic">
+                    WaveMusic
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active text-white" href="#" aria-current="page">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#">About</a>
+            </li>
+
+        </ul>
+    </header>
+
+    <!-- music list show section -->
+    <main id="main-wrapper">
+        <div class="container-fluid">
+            <div class="row gap-2  p-3">
+                <div class="col-lg-6 text-white p-3 d-flex flex-column gap-2" id="musictab">
+                   <!-- here code in js file -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- music controller -->
+    <footer id="musicbar">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 d-flex p-3">
+                    <img src="song/beyyaar.jpg" id="playcoverimg" class="me-2 border" alt="">
+                    <h6 id="playmusicname" class="text-white">
+                        <span id="playmusictitle">Bey Yaar Title Song Sad Tara Vina</span>
+                        <p id="playmusicartistname" class="text-dark mt-1 fst-italic">Artist : <span id="playartist">Madhav Krishna, Darshan Rawal</span></p>
+                    </h6>
+                </div>
+                <div class="col d-flex flex-column align-items-center gap-3 p-4">
+                    <div class="bar d-flex w-100">
+                        <span id="starttime">00</span>
+                        <input type="range" id="musicprogressbar" value="0">
+                        <span id="durationtime">00</span>
+                    </div>
+                    <div class="colntroller-btn d-flex gap-3">
+                        <span class="fs-2"><i class="ri-skip-back-fill"></i></span>
+                        <span class="fs-2"><i class="ri-play-circle-fill" id="masterplay"></i></span>
+                        <span class="fs-2"><i class="ri-skip-forward-fill"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+    </script>
+
+    <!-- custom js file -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

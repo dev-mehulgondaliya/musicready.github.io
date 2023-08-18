@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+body {
+  overflow: hidden;
+}
+
+#navbar {
+  background: black;
+  padding: 10px;
+}
+#navbar .logo {
+  width: 40px;
+}
+
+#main-wrapper {
+  background-image: url(../images/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+}
+#main-wrapper #coverimg {
+  width: 2rem;
+  height: 2rem;
+  background: #f1f1f1;
+  border-radius: 0;
+  border: 0.1rem solid;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+#main-wrapper #musictab {
+  overflow-y: scroll;
+  height: 75vmin;
+}
+#main-wrapper #musictab::-webkit-scrollbar {
+  display: none;
+}
+
+#musicbar {
+  background: rgba(225, 225, 225, 0.4);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+#musicbar #playcoverimg {
+  width: 70px;
+  height: 70px;
+}
+
+#musicprogressbar {
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  border-radius: 5px;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+/* Styling the track of the range input */
+#musicprogressbar::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  border-radius: 5px;
+}
+
+/* Styling the thumb (slider handle) */
+#musicprogressbar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: #0074D7;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: -9px; /* To vertically align the thumb with the track */
+}
+
+.bar {
+  position: relative;
+}
+.bar #starttime {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+.bar #durationtime {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}/*# sourceMappingURL=style.css.map */

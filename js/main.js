@@ -1,11 +1,11 @@
 let songList = [
-    {songname:"Bey Yaar Title Song Sad Tara Vina" ,songsrc:"/song/Beyyaar.mp3" ,coverimg:"../song/beyyaar.jpg" ,artist:"Madhav Krishna, Darshan Rawal"},
-    {songname:"Kehvu Ghanu Ghanu Che Chhello Divas Movie Song" ,songsrc:"/song/KehvuGhanuGhanuChe.mp3" ,coverimg:"../song/chellodivas.jpg" ,artist:"Parthiv Gohil"},
-    {songname:"Nayan Ne Bandh Rakhine Best Of Luck Laalu" ,songsrc:"/song/nayannebadhrakhi.mp3" ,coverimg:"../song/bestoflalu.jpg" ,artist:"Sachin-Jigar, Sachin Sanghvi"},
-    {songname:"Tu Maaro Shwaas Chhe " ,songsrc:"/song/tumaroswasche.mp3" ,coverimg:"../song/tumaroswas.jpg" ,artist:"Mitali Mahant"},
-    {songname:"Unchi Talavadi A Gujarati Song" ,songsrc:"/song/unchitalavadi.mp3" ,coverimg:"../song/coverimg.jpg" ,artist:"Santavni Trivedi"},
-    {songname:"Preet - Song Best Of Luck Laalu" ,songsrc:"/song/preet.mp3" ,coverimg:"../song/bestoflalu.jpg" ,artist:"Sachin-Jigar, Priya Saraiya,Divya Kumar"},
-    {songname:"Vhalam Aavo Ne Full Audio Song Love Ni Bhavai" ,songsrc:"/song/valamavone.mp3" ,coverimg:"../song/valamavone.jpg" ,artist:" Sachin-Jigar Jigardan Gadhavi"}
+    {songname:"Bey Yaar Title Song Sad Tara Vina" ,songsrc:"song/Beyyaar.mp3" ,coverimg:"song/beyyaar.jpg" ,artist:"Madhav Krishna, Darshan Rawal"},
+    {songname:"Kehvu Ghanu Ghanu Che Chhello Divas Movie Song" ,songsrc:"song/KehvuGhanuGhanuChe.mp3" ,coverimg:"song/chellodivas.jpg" ,artist:"Parthiv Gohil"},
+    {songname:"Nayan Ne Bandh Rakhine Best Of Luck Laalu" ,songsrc:"song/nayannebadhrakhi.mp3" ,coverimg:"song/bestoflalu.jpg" ,artist:"Sachin-Jigar, Sachin Sanghvi"},
+    {songname:"Tu Maaro Shwaas Chhe " ,songsrc:"song/tumaroswasche.mp3" ,coverimg:"song/tumaroswas.jpg" ,artist:"Mitali Mahant"},
+    {songname:"Unchi Talavadi A Gujarati Song" ,songsrc:"song/unchitalavadi.mp3" ,coverimg:"song/coverimg.jpg" ,artist:"Santavni Trivedi"},
+    {songname:"Preet - Song Best Of Luck Laalu" ,songsrc:"song/preet.mp3" ,coverimg:"song/bestoflalu.jpg" ,artist:"Sachin-Jigar, Priya Saraiya,Divya Kumar"},
+    {songname:"Vhalam Aavo Ne Full Audio Song Love Ni Bhavai" ,songsrc:"song/valamavone.mp3" ,coverimg:"song/valamavone.jpg" ,artist:" Sachin-Jigar Jigardan Gadhavi"}
 ];
 
 let audioElement = new Audio(songList[0]["songsrc"]);

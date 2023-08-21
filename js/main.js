@@ -18,6 +18,7 @@ let playCoverImg =  document.getElementById('playcoverimg');
 let startTime = document.getElementById('starttime');
 let durationTime = document.getElementById('durationtime');
 
+
 try{
     // show music list
     for(let item in songList){
@@ -40,6 +41,7 @@ try{
             playCoverImg.src = songList[index]["coverimg"];
             masterPlay.classList.add("ri-play-circle-fill");
             masterPlay.classList.remove("ri-pause-circle-fill");
+            loadSong(index);
 
             audioElement.addEventListener("timeupdate", () => {
                 let progress = parseInt((audioElement.currentTime / audioElement.duration) * 100);
@@ -104,7 +106,61 @@ try{
     // progressbar mannuly change then song current time change
     musicProgeressBar.addEventListener('change',()=>{
         audioElement.currentTime = (musicProgeressBar.value * audioElement.duration/100);
-    })
+    });
+
+    // next and prev song play when click next btn and prev btn
+    let currentSongIndex = 0;
+
+    function loadSong(index) {
+        currentSongIndex = index;
+        audioElement.src = songList[currentSongIndex]["songsrc"];
+        playMusicTitle.textContent = songList[currentSongIndex]["songname"];
+        playArtist.textContent = songList[currentSongIndex]["artist"];
+        playCoverImg.src = songList[currentSongIndex]["coverimg"];
+        audioElement.currentTime = 0;
+        updateProgressBar();
+    }
+
+    function updateProgressBar() {
+        let progress = (audioElement.currentTime / audioElement.duration) * 100;
+        startTime.textContent = formatTime(audioElement.currentTime);
+        durationTime.textContent = formatTime(audioElement.duration);
+    }
+
+    function formatTime(timeInSeconds) {
+        let minutes = Math.floor(timeInSeconds / 60);
+        let seconds = Math.floor(timeInSeconds % 60);
+        return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+    }
+
+    loadSong(currentSongIndex);
+
+    audioElement.addEventListener("timeupdate", updateProgressBar);
+
+    audioElement.addEventListener("ended", () => {
+        loadNextSong();
+        audioElement.play();
+    });
+
+    function loadNextSong() {
+        currentSongIndex = (currentSongIndex + 1) % songList.length;
+        loadSong(currentSongIndex);
+    }
+
+    document.getElementById("prevsongbtn").addEventListener("click", () => {
+        currentSongIndex = (currentSongIndex - 1 + songList.length) % songList.length;
+        loadSong(currentSongIndex);
+        audioElement.play();
+    });
+
+    document.getElementById("nextsongbtn").addEventListener("click", () => {
+        currentSongIndex = (currentSongIndex + 1) % songList.length;
+        loadSong(currentSongIndex);
+        audioElement.play();
+    });
+
+
+
 }catch(error){
     console.log(error);
 }
